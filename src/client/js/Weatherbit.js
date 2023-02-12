@@ -9,7 +9,6 @@ const Weatherbit = async (city ,myURL) => {
         description: res.data[0].weather.description,
         icon: res.data[0].weather.icon
     }
-    console.log(data);
     await fetch(myURL + '/Wbit', {
         method: 'POST',
         credentials: 'same-origin',

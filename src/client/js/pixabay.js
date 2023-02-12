@@ -8,7 +8,6 @@ const pixabay = async (city ,myURL) => {
         image: res.hits[0].webformatURL
     }
 
-    console.log(data);
     await fetch(myURL + '/pixabay', {
         method: 'POST',
         credentials: 'same-origin',

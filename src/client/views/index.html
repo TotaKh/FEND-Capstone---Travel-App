@@ -11,34 +11,42 @@
     <div class="holder headline">
       Travel App
     </div>
+    <div>
+      ready to travel around the world :)
+    </div>
     <div class="holder zip">
-      <label for="city">Enter the city you want to travel to :</label>
+      <label for="city">what city you want to vist : </label>
       <input type="text" id="city">
     </div>
     <div class="holder feel">
-      <label for="date">enter the date</label>
+      <label for="date">Chose the date : </label>
       <input type="date" class="myInput" id="date"></input>
     </div>
     <div>
-      <button id="generate" type="submit"> Generate </button>
+      <button id="generate" type="submit"> all abord </button>
     </div>
 
     <div class="holder entry">
-      <div class="title">Most Recent Entry</div>
-      <div id="entryHolder">
-        <div id="date"></div>
-        <div id="lng"></div>
-        <div id="lat"></div>
-        <div id="country"></div>
-        <div id="city"></div>
-        <div id="temp"></div>
-        <div id="description"></div>
-        <span id="icon"></span>
-        <img id="image" src="">
+      <div>
+        <img id="image" src=" " alt="city">
       </div>
-    </div>
+      <div class="title">nice Choice</div>
+      <h4>
+        <p id="Tripcity"></p>,<p id="country"></p>
+      </h4>
+      <h5>on <p id="Tripdate"></p>
+      </h5>
+      <div>
+        <div>
+          <img id="icon" src=" " alt="icon">
+        </div>
+        <div>
+          <p>Located in <span id="lng"></span> longitude and <span id="lat"></span> latitude.</p>
+          <p>The temperature <span id="temp"></span> and it's <span id="description"></span>.</p>
+        </div>
+      </div>
 
-  </div>
+    </div>
 
 </body>
 

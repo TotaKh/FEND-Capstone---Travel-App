@@ -57,8 +57,9 @@ app.post('/Wbit', (req, res) => {
 imageData = {};
 app.post('/pixabay', (req, res) => {
 
-  imageData = req.body.image;
-  console.log(imageData)
+  imageData = {
+    image:req.body.image
+  }
   res.send(imageData).status(200);
 })
 
@@ -76,6 +77,5 @@ app.get('/GetTrip', (req, res) => {
     WbitData,
     imageData
   }
-  console.log(projectData);//
   res.send(projectData).status(200);
 });
