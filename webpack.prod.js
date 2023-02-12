@@ -5,7 +5,7 @@ const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const workboxWebpackPlugin = require('workbox-webpack-plugin')
 
 module.exports = {
-    entry: './src/client/js/index.js',
+    entry: './src/client/app.js',
     mode: 'production',
     module: {
         rules: [
@@ -16,7 +16,7 @@ module.exports = {
             },
             {
                 test: /.scss$/,
-                use: [ 'style-loader', 'css-loader', 'sass-loader']
+                use: [ 'style-loader', 'css-loader']//, 'sass-loader'
             }
         ]
     },
