@@ -23,7 +23,7 @@ const port = 8081;
 
 // Setup Server
 const server = app.listen(port, listening);
-function listening(){
+function listening() {
   // console.log(server);
   console.log(`running on localhost:${port}`);
 };
@@ -32,8 +32,8 @@ function listening(){
 // POST routen
 GeoData = {};
 
-app.post('/GeoName', (req,res)=>{
-  newData ={
+app.post('/GeoName', (req, res) => {
+  newData = {
     lng: req.body.lng,
     lat: req.body.lat,
     country: req.body.country,
@@ -43,9 +43,9 @@ app.post('/GeoName', (req,res)=>{
   res.send(GeoData).status(200);
 })
 
-WbitData ={};
-app.post('/Wbit', (req,res)=>{
-  newData ={
+WbitData = {};
+app.post('/Wbit', (req, res) => {
+  newData = {
     temp: req.body.temp,
     description: req.body.description,
     icon: req.body.icon
@@ -54,10 +54,11 @@ app.post('/Wbit', (req,res)=>{
   res.send(WbitData).status(200);
 })
 
-imageData ={};
-app.post('/pixabay', (req,res)=>{
-  console.log(req.body)
-  imageData = req.body;
+imageData = {};
+app.post('/pixabay', (req, res) => {
+
+  imageData = req.body.image;
+  console.log(imageData)
   res.send(imageData).status(200);
 })
 
@@ -69,7 +70,7 @@ app.get('/', function (req, res) {
   res.sendFile('dist/index.html')
 })
 
-app.get('/GetTrip', (req,res)=> {
+app.get('/GetTrip', (req, res) => {
   projectData = {
     GeoData,
     WbitData,
