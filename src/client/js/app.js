@@ -35,7 +35,7 @@ const retrieveData = async (date , city) => {
 
         document.getElementById('description').innerHTML = allData.WbitData.description;
         document.getElementById('temp').innerHTML = allData.WbitData.temp + ' degrees';
-        document.getElementById('icon').src = "http://localhost:8081/src/client/media/icons/"+ allData.WbitData.icon + ".png";
+        document.getElementById('icon').src = "/src/client/media/icons/"+ allData.WbitData.icon + ".png";
         
         document.getElementById('image').src = allData.imageData.image;
        

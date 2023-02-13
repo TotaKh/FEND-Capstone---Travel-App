@@ -34,7 +34,7 @@ input {
 }
 
 #grid-container {
-    display: none;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     background-color: #8bbfd58b;
@@ -80,9 +80,9 @@ button {
     color: #222;
 }
 
-@media only screen and (min-width: 425px) {
-    #grid-container {
-        grid-template-columns: none;
+@media only screen and (max-width:700px){
+    body #grid-container {
+        grid-template-columns:none;
     }
 
 }

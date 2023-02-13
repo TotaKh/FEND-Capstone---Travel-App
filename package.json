@@ -27,6 +27,7 @@
     "cors-origin": "^0.4.5",
     "css": "^3.0.0",
     "css-loader": "^6.7.3",
+    "extract-media-query-plugin": "^1.0.24",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "image-webpack-loader": "^8.1.0",
