@@ -14,13 +14,19 @@ body {
     /* grid-template-columns:  */
 
     grid-gap: 1em;
-    font-size: 20px;
 }
 
 .centr {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.centr-img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
 
 input {
@@ -49,7 +55,8 @@ input {
 }
 
 #image {
-    max-height: 600px;
+    max-width:100%;
+    max-height:100%;
     border-radius: 20px;
 }
 
@@ -63,6 +70,7 @@ button {
     border: none;
     cursor: pointer;
     padding: 0 24px;
+    margin: 20px;
     border-radius: 50px;
     min-width: 200px;
     height: 50px;
@@ -70,4 +78,11 @@ button {
     background-color: #f0ec9c;
     font-weight: 500;
     color: #222;
+}
+
+@media only screen and (min-width: 425px) {
+    #grid-container {
+        grid-template-columns: none;
+    }
+
 }

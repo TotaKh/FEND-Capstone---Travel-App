@@ -8,11 +8,14 @@ document.getElementById('generate').addEventListener('click', performAction);
 function performAction(e) {
     const city = document.getElementById('city').value;
     const date = document.getElementById('date').value;
+    callAPIs(city,date)  
+}
 
-    GeoName(city, myURL);
-    Weatherbit(city, myURL);
-    pixabay(city, myURL);
-    retrieveData(date , city);
+const callAPIs = async (city,date)=>{
+    await GeoName(city, myURL);
+    await Weatherbit(city, myURL);
+    await pixabay(city, myURL);
+    await retrieveData(date , city);
 }
 
 /* Function to GET Project Data */
@@ -32,10 +35,9 @@ const retrieveData = async (date , city) => {
 
         document.getElementById('description').innerHTML = allData.WbitData.description;
         document.getElementById('temp').innerHTML = allData.WbitData.temp + ' degrees';
-        document.getElementById('icon').src = "../client/media/icons/"+ allData.WbitData.icon + ".png";
+        document.getElementById('icon').src = "http://localhost:8081/src/client/media/icons/"+ allData.WbitData.icon + ".png";
         
         document.getElementById('image').src = allData.imageData.image;
-
        
     }
     catch (error) {
