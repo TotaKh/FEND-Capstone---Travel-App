@@ -1,111 +1,73 @@
-body{
-    background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    padding: 1.5em;
 }
 
-#app{
+#app {
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
+    grid-template-rows: auto 1fr;
     /* grid-template-columns:  */
-    height:100vh;
-    background: #ffe6ea;
-    color: #000000;
-    justify-content: center;
+
     grid-gap: 1em;
     font-size: 20px;
-    font-family: 'Oswald', sans-serif;
 }
 
-.holder{
-display: none;
+.centr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.entry{
-    background: rgba(59, 74, 107, .4);
+input {
+    margin: 10px;
 }
 
-#entryHolder{
-
+#grid-container {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    background-color: #8bbfd58b;
+    border-radius: 20px;
 }
 
-#date{
-
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
 }
 
-#temp{
-
+.info {
+    align-items: flex-start;
+    margin: 0%;
 }
 
-#content{
-
+#image {
+    max-height: 600px;
+    border-radius: 20px;
 }
 
-.headline {
-
-}
-.title{
-
+html {
+    height: 100%;
 }
 
-/*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
-    font-size: 27px;
-}
-
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#b3ebfa;
-    color: #292929;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+button {
+    display: inline-block;
+    outline: 0;
     border: none;
+    cursor: pointer;
+    padding: 0 24px;
+    border-radius: 50px;
+    min-width: 200px;
+    height: 50px;
+    font-size: 18px;
+    background-color: #f0ec9c;
+    font-weight: 500;
+    color: #222;
 }
-
-button{
-    width: 400px;
-    height: 100px;
-    background: #16377e;
-    color: #ffffff;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
-}
-h1{
-    font-size: 36px;
-}
-
-textarea{
-    background:#b3ebfa;
-    color: #292929;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-}
-/* Reset style for HTML element on active to have no border*/
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-}
-/* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #292929; 
-    font-family: 'Oswald', sans-serif;
-
-} 
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #292929; 
-    font-family: 'Oswald', sans-serif;
-
-} 
-  
-::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #292929; 
-    font-family: 'Oswald', sans-serif;
-
-} 

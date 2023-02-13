@@ -20,11 +20,11 @@ const retrieveData = async (date , city) => {
     const request = await fetch(myURL + '/GetTrip');
     try {
         // Transform into JSON
-        const allData = await request.json()
-        console.log(allData.GeoData.city);
-        console.log(date);
+        const allData = await request.json();
+
+        document.getElementById('grid-container').style.display = 'grid';
         // Write updated data to DOM elements
-        document.getElementById("Tripdate").innerHTML = date;
+        document.getElementById('Tripdate').innerHTML = date;
         document.getElementById('lng').innerHTML = allData.GeoData.lng;
         document.getElementById('lat').innerHTML = allData.GeoData.lat;
         document.getElementById('Tripcity').innerHTML = allData.GeoData.city;
@@ -32,7 +32,7 @@ const retrieveData = async (date , city) => {
 
         document.getElementById('description').innerHTML = allData.WbitData.description;
         document.getElementById('temp').innerHTML = allData.WbitData.temp + ' degrees';
-        document.getElementById('icon').src = "http://localhost:8081/src/client/media/icons/"+ allData.WbitData.icon + ".png";
+        document.getElementById('icon').src = "../client/media/icons/"+ allData.WbitData.icon + ".png";
         
         document.getElementById('image').src = allData.imageData.image;
 
