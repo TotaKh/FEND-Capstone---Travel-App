@@ -1,4 +1,4 @@
-import {GeoName , Weatherbit , pixabay} from '../index'
+import {GeoName , Weatherbit , pixabay , images} from '../index'
 
 /* Global Variables */
 const myURL = 'http://localhost:8081';
@@ -35,7 +35,7 @@ const retrieveData = async (date , city) => {
 
         document.getElementById('description').innerHTML = allData.WbitData.description;
         document.getElementById('temp').innerHTML = allData.WbitData.temp + ' degrees';
-        document.getElementById('icon').src = "/src/client/media/icons/"+ allData.WbitData.icon + ".png";
+        document.getElementById('icon').src = "./media/icons/"+ allData.WbitData.icon + ".png";
         
         document.getElementById('image').src = allData.imageData.image;
        
