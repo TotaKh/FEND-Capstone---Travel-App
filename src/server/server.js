@@ -30,7 +30,7 @@ function listening() {
 
 
 // POST routen
-GeoData = {};
+let GeoData = {};
 
 app.post('/GeoName', (req, res) => {
   newData = {
@@ -43,7 +43,7 @@ app.post('/GeoName', (req, res) => {
   res.send(GeoData).status(200);
 })
 
-WbitData = {};
+let WbitData = {};
 app.post('/Wbit', (req, res) => {
   newData = {
     temp: req.body.temp,
@@ -54,7 +54,7 @@ app.post('/Wbit', (req, res) => {
   res.send(WbitData).status(200);
 })
 
-imageData = {};
+let imageData = {};
 app.post('/pixabay', (req, res) => {
 
   imageData = {
@@ -71,7 +71,7 @@ app.get('/', function (req, res) {
   res.sendFile('dist/index.html')
 })
 
-app.get('/GetTrip', gitTrip (req, res))
+app.get('/GetTrip', gitTrip)
 
 function gitTrip(req, res) {
   projectData = {

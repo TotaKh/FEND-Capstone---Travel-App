@@ -1,7 +1,7 @@
-import { } from '../src/server/server'
+import { GetTrip } from '../src/server/server'
 
-describe("Testing the '/GetTrip' endpoint", () => {
+describe("Testing the server", () => {
     test("'/GetTrip' is defined", async () => {
-        expect(doThis).toBeDefined();
+        await expect(express).toBeDefined();
     });
 });
