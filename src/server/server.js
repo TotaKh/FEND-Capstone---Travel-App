@@ -71,11 +71,13 @@ app.get('/', function (req, res) {
   res.sendFile('dist/index.html')
 })
 
-app.get('/GetTrip', (req, res) => {
+app.get('/GetTrip', gitTrip (req, res))
+
+function gitTrip(req, res) {
   projectData = {
     GeoData,
     WbitData,
     imageData
   }
   res.send(projectData).status(200);
-});
+};
