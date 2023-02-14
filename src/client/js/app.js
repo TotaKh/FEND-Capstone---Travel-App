@@ -39,8 +39,7 @@ const retrieveData = async (date , city) => {
 
         document.getElementById('description').innerHTML = allData.WbitData.description;
         document.getElementById('temp').innerHTML = allData.WbitData.temp + ' degrees';
-        const graphImage = require('../media/icons/' +  allData.WbitData.icon  + '.png')
-        document.getElementById('icon').src = {graphImage};
+        document.getElementById('icon').src = '../media/icons/' + allData.WbitData.icon + '.png' ; // can you help me here
         
         document.getElementById('image').src = allData.imageData.image;
        
