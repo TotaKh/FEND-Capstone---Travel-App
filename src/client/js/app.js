@@ -8,6 +8,10 @@ document.getElementById('generate').addEventListener('click', performAction);
 function performAction(e) {
     const city = document.getElementById('city').value;
     const date = document.getElementById('date').value;
+    if (city == '' || date ==''){
+        alert("Please enter city and date");
+        return;
+    }
     callAPIs(city,date)  
 }
 

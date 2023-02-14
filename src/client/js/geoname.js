@@ -10,6 +10,7 @@ const GeoName = async (city ,myURL) => {
         country: res.geonames[0].countryName,
         city: res.geonames[0].name,
     }
+
     await fetch(myURL + '/GeoName', {
         method: 'POST',
         credentials: 'same-origin',
