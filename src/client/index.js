@@ -4,8 +4,8 @@ import { Weatherbit } from './js/Weatherbit';
 import { pixabay } from './js/pixabay';
 
 import img from './media/airplain.png';
-const images = importAll(require.context('./', false, /\.(png|jpe?g|svg)$/));
+//const images = importAll(require.context('./', false, /\.(png|jpe?g|svg)$/));
 import './styles/style.scss';
 
 
-export{ performAction, GeoName, Weatherbit, pixabay, retrieveData, images}
+export{ performAction, GeoName, Weatherbit, pixabay, retrieveData}
