@@ -71,9 +71,10 @@ app.get('/', function (req, res) {
   res.sendFile('dist/index.html')
 })
 
+
 app.get('/GetTrip', gitTrip)
 
-function gitTrip(req, res) {
+const gitTrip = function (req, res) {
   projectData = {
     GeoData,
     WbitData,
@@ -81,3 +82,5 @@ function gitTrip(req, res) {
   }
   res.send(projectData).status(200);
 };
+
+export{gitTrip}
