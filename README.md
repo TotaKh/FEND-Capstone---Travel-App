@@ -7,7 +7,7 @@ Travel App is obtains a desired trip location & date from the user, and displays
 ## Instructions
 To run the app 
 - install node and npm
-- install all the dependencies in package.json useing `npm install`
+- install all the dependencies in package.json useing `npm install` 
 - `npm run dev` to build the project
 - `npm start` to run the server
 
