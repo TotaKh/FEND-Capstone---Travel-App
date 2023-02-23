@@ -3,9 +3,10 @@ import {GeoName , Weatherbit , pixabay } from '../index'
 /* Global Variables */
 const myURL = 'http://localhost:8081';
 
-document.getElementById('generate').addEventListener('click', performAction);
+//document.getElementById('generate').addEventListener('click', performAction);
 
-function performAction(e) {
+function performAction() {
+
     const city = document.getElementById('city').value;
     const date = document.getElementById('date').value;
     if (city == '' || date ==''){
@@ -19,7 +20,7 @@ const callAPIs = async (city,date)=>{
     await GeoName(city, myURL);
     await Weatherbit(city, myURL);
     await pixabay(city, myURL);
-    await retrieveData(date , city);
+    await retrieveData(date, city);
 }
 
 /* Function to GET Project Data */

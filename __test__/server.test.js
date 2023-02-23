@@ -1,7 +1,18 @@
-import { gitTrip } from '../src/server/server'
+// //import {listening} from'../src/server/server';
+// const listening = require('../src/server/server');
 
-describe("Testing the server", () => {
-    test("'/GetTrip' is defined", async () => {
-        await expect(gitTrip).toBeDefined();
+// describe("Testing expres server", () => {
+//     test("Testing the listening function ", async () => {
+//         await expect(listening).toBeDefined();
+//     })
+// });
+
+const request = require("supertest");
+const app = require("../src/server/server.js");
+
+describe("Test the root path", () => {
+    test("It should response the GET method", async () => {
+      const response = await request(app).get("/");
+      expect(response.statusCode).toBe(200);
     });
-});
+  });

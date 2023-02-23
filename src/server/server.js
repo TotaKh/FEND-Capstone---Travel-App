@@ -22,11 +22,10 @@ app.use(express.static('dist'));
 const port = 8081;
 
 // Setup Server
-const server = app.listen(port, listening);
-function listening() {
-  // console.log(server);
-  console.log(`running on localhost:${port}`);
-};
+
+// const server = app.listen(port, () => {
+//   console.log(`running on localhost:${port}`)
+// });
 
 
 // POST routen
@@ -58,7 +57,7 @@ let imageData = {};
 app.post('/pixabay', (req, res) => {
 
   imageData = {
-    image:req.body.image
+    image: req.body.image
   }
   res.send(imageData).status(200);
 })
@@ -66,21 +65,18 @@ app.post('/pixabay', (req, res) => {
 
 // GET route
 
-
 app.get('/', function (req, res) {
   res.sendFile('dist/index.html')
 })
 
 
-app.get('/GetTrip', gitTrip)
-
-const gitTrip = function (req, res) {
+app.get('/GetTrip', (req, res) => {
   projectData = {
     GeoData,
     WbitData,
     imageData
   }
   res.send(projectData).status(200);
-};
+})
 
-export{gitTrip}
+module.exports = app;

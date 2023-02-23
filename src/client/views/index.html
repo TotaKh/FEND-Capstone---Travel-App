@@ -10,7 +10,7 @@
   <div id="app">
     <div>
       <h1 class="centr">Travel App</h1>
-      <img class="centr-img" src="/src/client/media/airplain.png">
+      <img class="centr-img" id="img" src="/src/client/media/airplain.png">
       <h2 class="centr">ready to travel around the world :) </h2>
     </div>
     <div class="centr">
@@ -22,7 +22,7 @@
       <input type="date" class="myInput" id="date"></input>
     </div>
     <div class="centr">
-      <button id="generate" type="submit"> all abord </button>
+      <button id="generate" type="submit" onclick=Client.performAction()> all abord </button>
     </div>
 
 
@@ -38,9 +38,11 @@
         <h5>on <span id="Tripdate"></spam>
         </h5>
         <div>
+        <!--
           <div>
             <img id="icon" src=" " alt="icon">
           </div>
+        -->
           <div>
             <p>Located in <span id="lng"></span> longitude and <span id="lat"></span> latitude.</p>
             <p>The temperature <span id="temp"></span> and it's <span id="description"></span>.</p>

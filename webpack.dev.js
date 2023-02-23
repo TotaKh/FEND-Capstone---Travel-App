@@ -10,7 +10,7 @@ module.exports = {
     stats: 'verbose',
     module: {
         rules: [
-            
+
             {
                 test: /\.(png|jpe?g|gif)$/i,
                 use: [{
