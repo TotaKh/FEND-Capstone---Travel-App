@@ -23,9 +23,9 @@ const port = 8081;
 
 // Setup Server
 
-// const server = app.listen(port, () => {
-//   console.log(`running on localhost:${port}`)
-// });
+const server = app.listen(port, () => {
+   console.log(`running on localhost:${port}`)
+});
 
 
 // POST routen
